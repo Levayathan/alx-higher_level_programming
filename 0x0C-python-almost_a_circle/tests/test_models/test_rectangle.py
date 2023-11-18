@@ -35,7 +35,7 @@ class TestRectangle(unittest.TestCase):
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             r = Rectangle()
-        s = "__init__() missing 2 required positional arguments: 'width' \
+        s = "Rectangle.__init__() missing 2 required positional arguments: 'width' \
 and 'height'"
         self.assertEqual(str(e.exception), s)
 
@@ -43,7 +43,7 @@ and 'height'"
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             r = Rectangle(1, 2, 3, 4, 5, 6)
-        s = "__init__() takes from 3 to 6 positional arguments but 7 were \
+        s = "Rectangle.__init__() takes from 3 to 6 positional arguments but 7 were \
 given"
         self.assertEqual(str(e.exception), s)
 
@@ -51,7 +51,7 @@ given"
         '''Tests constructor signature.'''
         with self.assertRaises(TypeError) as e:
             r = Rectangle(1)
-        s = "__init__() missing 1 required positional argument: 'height'"
+        s = "Rectangle.__init__() missing 1 required positional argument: 'height'"
         self.assertEqual(str(e.exception), s)
 
     def test_D_instantiation(self):
@@ -225,7 +225,7 @@ given"
         r = Rectangle(5, 6)
         with self.assertRaises(TypeError) as e:
             Rectangle.area()
-        s = "area() missing 1 required positional argument: 'self'"
+        s = "Rectangle.area() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
     def test_I_area(self):
@@ -261,7 +261,7 @@ given"
         r = Rectangle(9, 8)
         with self.assertRaises(TypeError) as e:
             Rectangle.display()
-        s = "display() missing 1 required positional argument: 'self'"
+        s = "Rectangle.display() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
     def test_J_display_simple(self):
@@ -385,7 +385,7 @@ given"
         r = Rectangle(5, 2)
         with self.assertRaises(TypeError) as e:
             Rectangle.__str__()
-        s = "__str__() missing 1 required positional argument: 'self'"
+        s = "Rectangle.__str__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
     def test_K_str(self):
@@ -413,7 +413,7 @@ given"
         r = Rectangle(5, 2)
         with self.assertRaises(TypeError) as e:
             Rectangle.update()
-        s = "update() missing 1 required positional argument: 'self'"
+        s = "Rectangle.update() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
         d = r.__dict__.copy()
@@ -567,7 +567,7 @@ given"
         '''Tests to_dictionary() signature:'''
         with self.assertRaises(TypeError) as e:
             Rectangle.to_dictionary()
-        s = "to_dictionary() missing 1 required positional argument: 'self'"
+        s = "Rectangle.to_dictionary() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
         r = Rectangle(1, 2)
