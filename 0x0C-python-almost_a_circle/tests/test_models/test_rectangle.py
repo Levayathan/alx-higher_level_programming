@@ -58,7 +58,7 @@ class TestRectangle(unittest.TestCase):
     def test_D_instantiation(self):
         '''Tests instantiation.'''
         r = Rectangle(10, 20)
-        self.assertEqual(str(type(r)).strip(), "<class 'models.rectangle.Rectangle'>")
+        self.assertEqual(str(type(r)), "<class 'models.rectangle.Rectangle'>")
         self.assertTrue(isinstance(r, Base))
         d = {'_Rectangle__height': 20, '_Rectangle__width': 10,
              '_Rectangle__x': 0, '_Rectangle__y': 0, 'id': 1}
